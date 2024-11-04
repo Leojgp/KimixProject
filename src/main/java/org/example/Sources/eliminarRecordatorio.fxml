@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="488.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.AdminControllers.Recordatorios.RecordatorioController">
+    <children>
+        <Pane layoutX="118.0" layoutY="94.0" prefHeight="172.0" prefWidth="252.0" style="-fx-background-color: #EFE05D; -fx-background-radius: 16px;">
+            <children>
+                <TextField fx:id="idRecordatorio" layoutX="20.0" layoutY="86.0" prefHeight="23.0" prefWidth="89.0">
+                    <effect>
+                        <DropShadow height="54.71" radius="33.8125" spread="0.12" width="82.54" />
+                    </effect>
+                </TextField>
+                <Button fx:id="eliminar" layoutX="143.0" layoutY="86.0" mnemonicParsing="false" onAction="#eliminarRecordatorio" opacity="0.67" prefHeight="22.0" prefWidth="89.0" style="-fx-background-color: #F14C40;" text="ELIMINAR">
+                    <effect>
+                        <DropShadow radius="26.0" spread="0.04" width="85.0" />
+                    </effect>
+                </Button>
+              <Label layoutX="20.0" layoutY="32.0" text="Código de recordatorio">
+                  <font>
+                      <Font name="Corbel Light" size="23.0" />
+                  </font>
+              </Label>
+            </children>
+            <effect>
+                <DropShadow height="65.33" radius="31.34" spread="0.24" width="62.03">
+               <color>
+                  <Color red="1.0" green="0.9907407164573669" blue="0.9907407164573669" />
+               </color>
+               <input>
+                  <ColorAdjust brightness="-0.23" contrast="0.21" hue="0.05" saturation="-0.23" />
+               </input></DropShadow>
+            </effect>
+        </Pane>
+    </children>
+</Pane>

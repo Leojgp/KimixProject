@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.Light?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="638.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.RiesgosController">
+   <children>
+      <ImageView fitHeight="398.0" fitWidth="640.0" layoutX="-2.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IMAGENES/riesgosBack.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="258.0" layoutY="21.0" text="RIESGOS" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="35.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8552631735801697" green="0.20985624194145203" blue="0.20985624194145203" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <FlowPane fx:id="flowPane" alignment="TOP_CENTER" layoutX="48.0" layoutY="74.0" prefHeight="282.0" prefWidth="541.0" />
+   </children>
+</Pane>

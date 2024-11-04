@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="379.0" style="-fx-background-color: #24282e;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.AdminControllers.StockController">
+   <children>
+      <Label alignment="CENTER" layoutX="101.0" layoutY="14.0" prefHeight="55.0" prefWidth="177.0" text="STOCK" textFill="WHITE">
+         <font>
+            <Font name="Candara Light" size="32.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.31">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="77.0" layoutY="78.0" text="Stock" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="stock" layoutX="70.0" layoutY="106.0" prefHeight="23.0" prefWidth="62.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Spinner>
+      <Button fx:id="cambiar" layoutX="146.0" layoutY="151.0" mnemonicParsing="false" onAction="#cambiarStock" prefHeight="29.0" prefWidth="88.0" text="Cambiar">
+         <effect>
+            <DropShadow spread="0.09">
+               <color>
+                  <Color red="0.6166666746139526" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Label fx:id="prodActual" alignment="CENTER" layoutX="19.0" layoutY="194.0" prefHeight="29.0" prefWidth="346.0" textFill="#7700ff">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Pane layoutX="354.0" layoutY="99.0" prefHeight="66.0" prefWidth="88.0" />
+      <Spinner fx:id="stockMin" layoutX="247.0" layoutY="106.0" prefHeight="23.0" prefWidth="62.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Spinner>
+      <Label layoutX="243.0" layoutY="78.0" text="Stock Min." textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

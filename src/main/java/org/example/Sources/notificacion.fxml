@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="449.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.NotificacionesPackage.NotificacionesController">
+   <children>
+      <ImageView fitHeight="206.0" fitWidth="449.0" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@IMAGENES/gradient.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.78" hue="-0.56" saturation="0.88" />
+         </effect></ImageView>
+      <Button layoutX="180.0" layoutY="155.0" mnemonicParsing="false" onAction="#cerrar" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="ACEPTAR" textFill="WHITE">
+         <effect>
+            <DropShadow height="22.47" radius="11.1" width="23.93">
+               <color>
+                  <Color red="0.4166666567325592" blue="1.0" />
+               </color>
+               <input>
+                  <InnerShadow blurType="GAUSSIAN" radius="13.6625" width="35.65">
+                     <color>
+                        <Color red="0.5666666626930237" blue="1.0" />
+                     </color>
+                  </InnerShadow>
+               </input>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="titulo" alignment="CENTER" layoutX="41.0" layoutY="14.0" prefHeight="44.0" prefWidth="388.0" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="texto" layoutX="17.0" layoutY="58.0" prefHeight="73.0" prefWidth="418.0" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="icono" fitHeight="37.0" fitWidth="40.0" layoutX="395.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</Pane>

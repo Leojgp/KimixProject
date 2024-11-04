@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.ResultsController">
+    <children>
+        <ImageView fitHeight="784.0" fitWidth="1243.0" layoutX="-6.0" layoutY="-8.0">
+            <image>
+                <Image url="@IMAGENES/gradient.jpg" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="381.0" prefHeight="116.0" prefWidth="470.0" text="RESULTADOS">
+            <font>
+                <Font name="Corbel Light" size="56.0" />
+            </font>
+            <effect>
+                <Glow level="1.0">
+                    <input>
+                        <DropShadow height="63.75" radius="41.815" width="105.51">
+                            <color>
+                                <Color red="0.44736841320991516" green="0.44736841320991516" blue="0.44736841320991516" />
+                            </color>
+                        </DropShadow>
+                    </input>
+                </Glow>
+            </effect>
+            <textFill>
+                <RadialGradient centerX="0.505524861878453" centerY="0.5" focusAngle="-99.73" focusDistance="-0.09195402298850575" radius="0.6149425287356323">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.4901960790157318" green="0.027450980618596077" blue="0.4313725531101227" />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                            <color>
+                                <Color red="1.0" green="1.0" blue="1.0" />
+                            </color>
+                        </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                    </stops>
+                </RadialGradient>
+            </textFill>
+        </Label>
+        <Pane fx:id="reactivoPane" layoutX="78.0" layoutY="103.0" opacity="0.77" prefHeight="597.0" prefWidth="1081.0" style="-fx-background-color: black; -fx-background-radius: 16px;">
+            <children>
+                <TableView fx:id="tabla" layoutX="26.0" layoutY="21.0" prefHeight="551.0" prefWidth="1030.0">
+                    <columns>
+                        <TableColumn id="nombre" fx:id="nombreR" editable="false" prefWidth="145.0" style="color: green;" text="Nombre" />
+                        <TableColumn id="codigo" fx:id="codigoR" prefWidth="58.0" text="Código" />
+                        <TableColumn id="fecha" fx:id="fechaR" prefWidth="92.0" text="Fecha Cad." />
+                        <TableColumn id="pureza" fx:id="purezaR" prefWidth="75.0" text="Pureza" />
+                        <TableColumn id="formato" fx:id="formatoR" prefWidth="61.0" text="Formato" />
+                        <TableColumn id="riesgo" fx:id="riesgoR" prefWidth="225.0" text="Riesgo" />
+                        <TableColumn id="localizacion" fx:id="localizacionR" minWidth="6.0" prefWidth="173.0" text="Localizacion" />
+                        <TableColumn id="stock" fx:id="stockR" prefWidth="49.0" text="Stock" />
+                        <TableColumn id="ubicacion" fx:id="ubicacionR" prefWidth="81.0" text="Ubicación" />
+                        <TableColumn id="stockMin" fx:id="stockMinR" prefWidth="67.0" text="Stock Min." />
+                    </columns>
+                </TableView>
+            </children>
+        </Pane>
+      <Pane fx:id="auxiliarPane" layoutX="167.0" layoutY="116.0" opacity="0.76" prefHeight="571.0" prefWidth="903.0" style="-fx-background-color: black; -fx-background-radius: 16px;" visible="false">
+         <children>
+            <TableView fx:id="tabla1" layoutX="32.0" layoutY="29.0" prefHeight="516.0" prefWidth="834.0">
+               <columns>
+                  <TableColumn id="nombre" fx:id="nombreA" editable="false" prefWidth="151.0" style="color: green;" text="Nombre" />
+                  <TableColumn id="codigo" fx:id="codigoA" prefWidth="52.0" text="Código" />
+                  <TableColumn id="formato" fx:id="formatoA" prefWidth="100.0" text="Formato" />
+                  <TableColumn id="localizacion" fx:id="localizacionA" minWidth="6.0" prefWidth="254.0" text="Localizacion" />
+                  <TableColumn id="stock" fx:id="stockA" prefWidth="82.0" text="Stock" />
+                  <TableColumn id="ubicacion" fx:id="ubicacionA" prefWidth="124.0" text="Ubicación" />
+                  <TableColumn id="stockMin" fx:id="stockMinA" prefWidth="70.0" text="Stock Min." />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="materialPane" layoutX="88.0" layoutY="134.0" opacity="0.77" prefHeight="597.0" prefWidth="1081.0" style="-fx-background-color: black; -fx-background-radius: 16px;" visible="false">
+         <children>
+            <TableView fx:id="tabla2" layoutX="26.0" layoutY="56.0" prefHeight="516.0" prefWidth="1030.0">
+               <columns>
+                  <TableColumn id="nombre" fx:id="nombreM" editable="false" prefWidth="145.0" style="color: green;" text="Nombre" />
+                  <TableColumn id="codigo" fx:id="codigoM" prefWidth="58.0" text="Código" />
+                  <TableColumn id="fecha" fx:id="fechaM" prefWidth="92.0" text="Fecha Compra" />
+                  <TableColumn id="pureza" fx:id="subcategoriaM" prefWidth="113.0" text="Subcategoría" />
+                  <TableColumn id="formato" fx:id="serieM" prefWidth="102.0" text="Num. Serie" />
+                  <TableColumn id="riesgo" fx:id="descripcionM" prefWidth="146.0" text="Descripción" />
+                  <TableColumn id="localizacion" fx:id="localizacionM" minWidth="6.0" prefWidth="173.0" text="Localizacion" />
+                  <TableColumn id="stock" fx:id="stockM" prefWidth="49.0" text="Stock" />
+                  <TableColumn id="ubicacion" fx:id="ubicacionM" prefWidth="81.0" text="Ubicación" />
+                  <TableColumn id="stockMin" fx:id="stockMinM" prefWidth="67.0" text="Stock Min." />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="tipPane" layoutX="167.0" layoutY="695.0" prefHeight="73.0" prefWidth="952.0">
+         <children>
+            <Label layoutX="175.0" layoutY="25.0" text="NOTA : DOBLE CLICK EN EL REACTIVO PARA MOSTRAR LOS PICTOGRAMAS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</Pane>

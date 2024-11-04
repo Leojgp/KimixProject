@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.AdminControllers.Stats.InventarioPdfController">
+   <children>
+      <ImageView fitHeight="348.0" fitWidth="543.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IMAGENES/login.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.49" contrast="-0.19" hue="0.08" saturation="0.32">
+               <input>
+                  <Lighting diffuseConstant="1.09" specularConstant="0.0" specularExponent="12.64" surfaceScale="2.19">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant>
+                           <color>
+                              <Color red="0.4655238091945648" green="0.07999999821186066" blue="1.0" />
+                           </color>
+                        </Light.Distant>
+                     </light>
+                  </Lighting>
+               </input>
+            </ColorAdjust>
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="161.0" layoutY="14.0" prefHeight="59.0" prefWidth="200.0" text="CONFIGURAR PDF" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Pane layoutX="118.0" layoutY="81.0" prefHeight="219.0" prefWidth="286.0" style="-fx-background-color: black; -fx-background-radius: 16px;">
+         <children>
+            <ChoiceBox fx:id="tipos" layoutX="68.0" layoutY="55.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow radius="31.9825" width="108.93" />
+               </effect>
+            </ChoiceBox>
+            <Label layoutX="129.0" layoutY="32.0" text="TIPO:" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="62.0" layoutY="141.0" mnemonicParsing="false" onAction="#generarPDF" prefHeight="41.0" prefWidth="163.0" style="-fx-background-color: white;" text="GENERAR PDF">
+               <effect>
+                  <DropShadow height="55.45" radius="17.76" width="17.59" />
+               </effect>
+               <font>
+                  <Font name="Consolas" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="209.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMAGENES/pdfIcon.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="6.34" radius="13.662500000000001" width="50.31">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" radius="11.465" width="26.86">
+               <color>
+                  <Color red="0.5833333134651184" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+   </children>
+</Pane>

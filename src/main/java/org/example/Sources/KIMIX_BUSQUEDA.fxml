@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="709.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.SearchController">
+   <children>
+      <MenuBar prefHeight="39.0" prefWidth="838.0" VBox.vgrow="NEVER">
+         <menus>
+            <Menu fx:id="opciones" mnemonicParsing="false" text="Opciones">
+               <items>
+                  <MenuItem fx:id="admin" mnemonicParsing="false" onAction="#showAdminPanel" text="Administración" />
+                  <MenuItem fx:id="creditosMenu" mnemonicParsing="false" onAction="#creditos" text="Créditos" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Pane prefHeight="689.0" prefWidth="838.0">
+         <children>
+            <ImageView fitHeight="697.0" fitWidth="838.0" layoutY="-6.0">
+               <image>
+                  <Image url="@IMAGENES/bc.jpg" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="0.46" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+                     <bumpInput>
+                        <Glow level="1.0">
+                           <input>
+                              <DropShadow />
+                           </input>
+                        </Glow>
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="66.21" elevation="123.62">
+                           <color>
+                              <Color red="0.7592592835426331" green="0.9879629611968994" blue="1.0" />
+                           </color>
+                        </Light.Distant>
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="172.0" layoutX="652.0" layoutY="608.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMAGENES/izvCompleto.png" />
+               </image>
+
+            </ImageView>
+            <Pane layoutX="279.0" layoutY="108.0" opacity="0.9" prefHeight="158.0" prefWidth="286.0" style="-fx-background-color: #6f1785; -fx-background-radius: 10px;">
+               <children>
+                  <TextField fx:id="buscador" layoutX="28.0" layoutY="55.0" prefHeight="31.0" prefWidth="230.0">
+                     <font>
+                        <Font name="Lucida Console" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="34.93" radius="14.217500000000001" width="23.94">
+                           <color>
+                              <Color red="0.5319809913635254" green="0.7666149139404297" blue="0.9342105388641357" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </TextField>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="43.0" layoutY="-9.0" prefHeight="64.0" prefWidth="199.0" text="Buscador">
+                     <font>
+                        <Font name="Corbel Light" size="33.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.23696682464454977" endY="0.5308056872037914" startX="0.15165876777251186" startY="0.4265402843601896">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.48148149251937866" green="0.6888889074325562" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.4722222089767456" green="0.6921296119689941" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <effect>
+                        <Blend mode="MULTIPLY" />
+                     </effect>
+                  </Label>
+               </children>
+               <effect>
+                  <Blend mode="OVERLAY">
+                     <topInput>
+                        <DropShadow blurType="GAUSSIAN" height="64.33" radius="29.505" width="55.69">
+                           <color>
+                              <Color red="0.6184210777282715" green="0.054398149251937866" blue="0.5996202826499939" />
+                           </color>
+                        </DropShadow>
+                     </topInput></Blend>
+               </effect>
+            </Pane>
+            <Pane layoutX="278.0" layoutY="328.0" opacity="0.92" prefHeight="200.0" prefWidth="286.0" style="-fx-background-color: rgb(59, 192, 208); -fx-background-radius: 10px;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="44.0" layoutY="-19.0" prefHeight="78.0" prefWidth="199.0" text="Filtros">
+                     <font>
+                        <Font name="Corbel Light" size="24.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.6000000238418579" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <effect>
+                        <Blend mode="MULTIPLY" />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="20.0" prefHeight="78.0" prefWidth="199.0" text="BUSCAR POR:" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Light" size="12.0" />
+                     </font>
+                     <effect>
+                        <Blend mode="MULTIPLY" />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="88.0" prefHeight="78.0" prefWidth="199.0" text="TIPO DE PRODUCTO:" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Light" size="12.0" />
+                     </font>
+                     <effect>
+                        <Blend mode="MULTIPLY" />
+                     </effect>
+                  </Label>
+                  <ChoiceBox fx:id="filtro2" layoutX="68.0" layoutY="145.0" prefWidth="150.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="filtro1" layoutX="68.0" layoutY="78.0" prefWidth="150.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ChoiceBox>
+               </children>
+               <effect>
+                  <Blend mode="COLOR_BURN" opacity="0.51">
+                     <topInput>
+                        <DropShadow height="133.85" radius="88.03999999999999" spread="0.33" width="220.31">
+                           <color>
+                              <Color green="0.3047619163990021" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </topInput></Blend>
+               </effect>
+            </Pane>
+            <Label fx:id="errorText" alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="546.0" prefHeight="78.0" prefWidth="513.0" textFill="RED">
+               <font>
+                  <Font name="Corbel Light" size="26.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Label>
+            <Pane layoutX="321.0" layoutY="198.0" prefHeight="85.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="buscar" alignment="CENTER" layoutX="58.0" layoutY="26.0" mnemonicParsing="false" onAction="#search" prefHeight="27.0" prefWidth="84.0" text=" Buscar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Pane>
+   </children>
+   <effect>
+      <Lighting diffuseConstant="1.8" specularConstant="0.28" specularExponent="37.01" surfaceScale="2.08">
+         <bumpInput>
+            <Shadow height="23.935000000000002" radius="12.201250000000002" width="26.87" />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</VBox>

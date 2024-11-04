@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.AdminControllers.MoverController">
+   <children>
+      <ImageView fitHeight="322.0" fitWidth="561.0" layoutX="-3.0" pickOnBounds="true">
+         <image>
+            <Image url="@IMAGENES/gradient2.jpg" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="0.43" specularConstant="0.0" specularExponent="10.11" surfaceScale="0.92">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="40.86" elevation="28.45">
+                     <color>
+                        <Color red="0.5185185074806213" green="0.03703703731298447" blue="1.0" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Label layoutX="205.0" layoutY="75.0" text="Nueva Localización" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="212.0" layoutY="147.0" text="Nueva Ubicación" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="localizacion" layoutX="188.0" layoutY="104.0" prefHeight="23.0" prefWidth="168.0" />
+      <TextField fx:id="ubicacion" layoutX="188.0" layoutY="177.0" prefHeight="23.0" prefWidth="168.0" />
+      <Button layoutX="221.0" layoutY="233.0" mnemonicParsing="false" onAction="#cambiar" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: white;" text="Cambiar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="161.0" layoutY="21.0" text="MOVER PRODUCTO" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="28.0" />
+         </font>
+         <effect>
+            <DropShadow height="23.93" radius="10.7325" spread="0.39">
+               <color>
+                  <Color green="0.550000011920929" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label fx:id="prodActual" alignment="CENTER" layoutX="18.0" layoutY="269.0" prefHeight="32.0" prefWidth="518.0" textFill="#9000ff">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+   </children>
+</Pane>

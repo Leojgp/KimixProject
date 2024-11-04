@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.AdminControllers.CSVController">
+   <children>
+      <ImageView fitHeight="471.0" fitWidth="760.0" layoutX="-6.0">
+         <image>
+            <Image url="@IMAGENES/csv.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="89.0" layoutY="34.0" opacity="0.75" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #1e1a1f; -fx-background-radius: 16PX;">
+         <children>
+            <Button fx:id="descargarButton" layoutX="25.0" layoutY="69.0" mnemonicParsing="false" onAction="#descargar" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: BLACK;" text="DESCARGAR" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" spread="0.47">
+                     <color>
+                        <Color red="0.6833333373069763" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="29.0" layoutY="23.0" text="PLANTILLA CSV" textFill="WHITE">
+               <font>
+                  <Font name="Candara Light" size="22.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="tipo" layoutX="25.0" layoutY="121.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="399.0" layoutY="45.0" opacity="0.75" prefHeight="139.0" prefWidth="294.0" style="-fx-background-color: #1e1a1f; -fx-background-radius: 16PX;">
+         <children>
+            <Label layoutX="95.0" layoutY="20.0" text="IMPORTAR" textFill="WHITE">
+               <font>
+                  <Font name="Candara Light" size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="elegirButton" layoutX="72.0" layoutY="61.0" mnemonicParsing="false" onAction="#importar" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: BLACK;" text="ELIGE ARCHIVO" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" spread="0.47">
+                     <color>
+                        <Color red="0.6833333373069763" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="success" layoutX="189.0" layoutY="190.0" prefHeight="91.0" prefWidth="449.0" visible="false">
+         <children>
+            <Label fx:id="successText" alignment="CENTER" layoutX="32.0" layoutY="25.0" prefHeight="42.0" prefWidth="286.0" text="GUARDADO EN DESCARGAS" textFill="#22ff00">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <effect>
+                  <Glow level="0.9" />
+               </effect>
+            </Label>
+            <ImageView fitHeight="36.0" fitWidth="48.0" layoutX="318.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMAGENES/check.png" />
+               </image>
+               <effect>
+                  <DropShadow height="12.21" radius="7.8025" spread="0.38">
+                     <color>
+                        <Color red="0.06666667014360428" green="1.0" />
+                     </color>
+                     <input>
+                        <InnerShadow choke="0.56" height="23.93" radius="7.800000000000001" width="9.27">
+                           <color>
+                              <Color green="1.0" />
+                           </color>
+                        </InnerShadow>
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="114.0" layoutY="434.0" text="IMPORTANTE: NO ALTERAR EL ORDEN DE LAS FILAS DE LA PLANTILLA Y RESPETAR FORMATOS DE FECHAS" textFill="RED" />
+   </children>
+</Pane>

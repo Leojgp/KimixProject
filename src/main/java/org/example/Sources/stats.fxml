@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.AdminControllers.Stats.statsController">
+   <children>
+      <ImageView fitHeight="624.0" fitWidth="931.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IMAGENES/gradient.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.31" contrast="-0.24" hue="0.21" saturation="-0.09" />
+         </effect></ImageView>
+      <PieChart fx:id="stats" layoutX="167.0" layoutY="91.0" prefHeight="399.0" prefWidth="594.0" style="-fx-border-color: black; -fx-border-radius: 4px; -fx-background-color: white; -fx-border-width: 3px;">
+         <effect>
+            <DropShadow radius="12.2" width="29.8">
+               <color>
+                  <Color red="0.7333333492279053" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect></PieChart>
+      <Button layoutX="172.0" layoutY="534.0" mnemonicParsing="false" onAction="#inventarioPdf" prefHeight="41.0" prefWidth="170.0" style="-fx-background-color: white;" text="GENERAR INVENTARIO PDF">
+         <effect>
+            <DropShadow height="41.52" radius="19.525" width="38.58">
+               <color>
+                  <Color red="0.3499999940395355" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label alignment="CENTER" layoutX="367.0" layoutY="30.0" text="ESTADÍSTICAS" textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="cantidadLabel" layoutX="172.0" layoutY="501.0" prefHeight="32.0" prefWidth="583.0" />
+      <Pane layoutX="360.0" layoutY="524.0" prefHeight="62.0" prefWidth="403.0" style="-fx-background-color: black; -fx-background-radius: 16px;">
+         <children>
+            <Label fx:id="cantidades" layoutX="12.0" layoutY="19.0" prefHeight="25.0" prefWidth="379.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</Pane>

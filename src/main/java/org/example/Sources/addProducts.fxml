@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.AdminControllers.ProductsController">
+   <children>
+      <ImageView fitHeight="786.0" fitWidth="1064.0" layoutX="-3.0" layoutY="-25.0">
+         <image>
+            <Image url="@IMAGENES/gradient2.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.66" contrast="0.35" hue="0.42" saturation="0.38" />
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="255.0" layoutY="23.0" prefHeight="89.0" prefWidth="625.0" text="AÑADIR PRODUCTOS" textFill="WHITE">
+         <font>
+            <Font name="Caladea" size="54.0" />
+         </font>
+         <effect>
+            <Glow level="1.0">
+               <input>
+                  <DropShadow blurType="GAUSSIAN" height="0.0" radius="39.9225" spread="0.26" width="161.69">
+                     <color>
+                        <Color red="0.4166666567325592" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </input>
+            </Glow>
+         </effect>
+      </Label>
+      <Pane fx:id="reactivoPane" layoutX="364.0" layoutY="112.0" prefHeight="627.0" prefWidth="390.0">
+         <children>
+            <Label fx:id="reactivoLabel" alignment="CENTER" layoutX="121.0" prefHeight="66.0" prefWidth="149.0" text="REACTIVO" textFill="WHITE">
+               <font>
+                  <Font name="Caladea" size="24.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0">
+                     <input>
+                        <DropShadow blurType="GAUSSIAN" height="79.78" radius="40.817499999999995" spread="0.33" width="85.49" />
+                     </input>
+                  </Glow>
+               </effect>
+            </Label>
+            <Pane layoutX="40.0" layoutY="66.0" opacity="0.92" prefHeight="531.0" prefWidth="324.0" style="-fx-background-color: #A267AC; -fx-background-radius: 16px;">
+               <children>
+                  <Label layoutX="23.0" layoutY="32.0" text="Nombre" textFill="#fff9f9">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nombreR" layoutX="140.0" layoutY="32.0" prefHeight="25.0" prefWidth="149.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="24.0" layoutY="80.0" text="Pureza" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="purezaR" layoutX="140.0" layoutY="80.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="24.0" layoutY="130.0" text="Riesgo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="riesgoR" layoutX="141.0" layoutY="130.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="22.0" layoutY="178.0" text="Formato" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="formatoR" layoutX="140.0" layoutY="178.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="22.0" layoutY="249.0" text="Stock" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="stockActR" editable="true" layoutX="140.0" layoutY="249.0" prefHeight="25.0" prefWidth="69.0" />
+                  <Label layoutX="18.0" layoutY="301.0" text="Localizacion" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="localizacionR" layoutX="140.0" layoutY="301.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="17.0" layoutY="341.0" text="Ubicación" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ubicacionR" layoutX="140.0" layoutY="341.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Spinner fx:id="stockMinR" editable="true" layoutX="215.0" layoutY="249.0" prefHeight="25.0" prefWidth="69.0" />
+                  <Label layoutX="147.0" layoutY="230.0" text="Actual" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="222.0" layoutY="230.0" text="Mínimo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="añadirR" layoutX="120.0" layoutY="454.0" mnemonicParsing="false" onAction="#añadirReactivo" prefHeight="25.0" prefWidth="85.0" text="Añadir">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="15.0" layoutY="378.0" text="Fecha cad." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dateR" layoutX="140.0" layoutY="378.0" prefHeight="25.0" prefWidth="149.0" />
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.46666666865348816" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="materialPane" layoutX="364.0" layoutY="101.0" prefHeight="621.0" prefWidth="390.0" visible="false">
+         <children>
+            <Pane layoutX="36.0" layoutY="72.0" opacity="0.89" prefHeight="531.0" prefWidth="324.0" style="-fx-background-color: #A267AC; -fx-background-radius: 16px;">
+               <children>
+                  <Label layoutX="23.0" layoutY="32.0" text="Nombre" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nombreM" layoutX="140.0" layoutY="32.0" prefHeight="25.0" prefWidth="149.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="24.0" layoutY="80.0" text="Subcategoría" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="subcategoríaM" layoutX="140.0" layoutY="80.0" prefHeight="23.0" prefWidth="150.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="24.0" layoutY="130.0" text="Nº Serie" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="numSerieM" layoutX="141.0" layoutY="130.0" prefHeight="23.0" prefWidth="150.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="22.0" layoutY="206.0" text="Descripción" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="descripcionM" alignment="TOP_LEFT" layoutX="140.0" layoutY="204.0" prefHeight="25.0" prefWidth="150.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="23.0" layoutY="285.0" text="Stock" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="stockActM" editable="true" layoutX="140.0" layoutY="285.0" prefHeight="25.0" prefWidth="69.0" />
+                  <Label layoutX="20.0" layoutY="339.0" text="Localizacion" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="localizacionM" layoutX="140.0" layoutY="339.0" prefHeight="23.0" prefWidth="150.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="18.0" layoutY="378.0" text="Ubicación" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ubicacionM" layoutX="140.0" layoutY="378.0" prefHeight="23.0" prefWidth="150.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Button fx:id="añadirM" layoutX="120.0" layoutY="476.0" mnemonicParsing="false" onAction="#añadirMaterial" prefHeight="25.0" prefWidth="85.0" text="Añadir" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="14.0" layoutY="420.0" text="Fecha compra" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dateM" layoutX="141.0" layoutY="420.0" prefHeight="25.0" prefWidth="149.0" />
+                  <Spinner fx:id="stockMinM" editable="true" layoutX="216.0" layoutY="285.0" prefHeight="25.0" prefWidth="69.0" />
+                  <Label layoutX="152.0" layoutY="255.0" text="Actual" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="228.0" layoutY="257.0" text="Mínimo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.5" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Label alignment="CENTER" layoutX="102.0" layoutY="14.0" prefHeight="66.0" prefWidth="173.0" text="MATERIALES" textFill="WHITE">
+               <font>
+                  <Font name="Caladea" size="24.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0">
+                     <input>
+                        <DropShadow blurType="GAUSSIAN" height="79.78" radius="40.817499999999995" spread="0.33" width="85.49" />
+                     </input>
+                  </Glow>
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="auxiliarPane" layoutX="393.0" layoutY="112.0" prefHeight="525.0" prefWidth="349.0" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutX="97.0" layoutY="14.0" prefHeight="66.0" prefWidth="139.0" text="AUXILIAR" textFill="WHITE">
+               <font>
+                  <Font name="Caladea" size="24.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0">
+                     <input>
+                        <DropShadow blurType="GAUSSIAN" height="79.78" radius="40.817499999999995" spread="0.33" width="85.49" />
+                     </input>
+                  </Glow>
+               </effect>
+            </Label>
+            <Pane layoutX="13.0" layoutY="81.0" opacity="0.89" prefHeight="405.0" prefWidth="324.0" style="-fx-background-color: #A267AC; -fx-background-radius: 16px;">
+               <children>
+                  <Label layoutX="23.0" layoutY="32.0" text="Nombre" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nombreA" layoutX="140.0" layoutY="32.0" prefHeight="25.0" prefWidth="149.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="24.0" layoutY="80.0" text="Pureza" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="purezaA" layoutX="140.0" layoutY="80.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="22.0" layoutY="125.0" text="Formato" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="formatoA" layoutX="140.0" layoutY="125.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="28.0" layoutY="176.0" text="Stock" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="stockActA" editable="true" layoutX="140.0" layoutY="176.0" prefHeight="25.0" prefWidth="69.0" />
+                  <Label layoutX="19.0" layoutY="224.0" text="Localizacion" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="localizacionA" layoutX="140.0" layoutY="224.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="17.0" layoutY="269.0" text="Ubicación" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ubicacionA" layoutX="140.0" layoutY="269.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Button fx:id="añadirA" layoutX="120.0" layoutY="336.0" mnemonicParsing="false" onAction="#añadirAuxiliar" prefHeight="25.0" prefWidth="85.0" text="Añadir">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Spinner fx:id="stockMinA" editable="true" layoutX="215.0" layoutY="176.0" prefHeight="25.0" prefWidth="69.0" />
+                  <Label layoutX="146.0" layoutY="154.0" text="Actual" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="156.0" text="Mínimo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.5354938507080078" green="0.004629629664123058" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="103.0" layoutY="275.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 16px;">
+         <children>
+            <Label layoutX="77.0" layoutY="18.0" text="TIPO" textFill="WHITE">
+               <font>
+                  <Font name="Candara Light" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="22.4575" spread="0.34" width="70.83">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <ChoiceBox fx:id="tipo" layoutX="23.0" layoutY="75.0" prefWidth="150.0" />
+            <Button fx:id="cambiarTipoButton" layoutX="57.0" layoutY="148.0" mnemonicParsing="false" onAction="#cambiarTipo" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: white;" text="Cambiar">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="40.42" radius="23.6475" width="56.17">
+                     <color>
+                        <Color red="0.30000001192092896" blue="1.0" />
+                     </color>
+                     <input>
+                        <InnerShadow choke="0.35" height="29.79" radius="13.6625" width="26.86">
+                           <color>
+                              <Color red="0.18333333730697632" blue="1.0" />
+                           </color>
+                        </InnerShadow>
+                     </input>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow radius="10.7325" spread="0.18" width="23.93">
+               <color>
+                  <Color red="0.8195987939834595" green="0.22685185074806213" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.DeleteProductController">
+   <children>
+      <ImageView fitHeight="421.0" fitWidth="613.0" layoutY="-15.0">
+         <image>
+            <Image url="@IMAGENES/gradient2.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.64" />
+         </effect>
+      </ImageView>
+      <Pane layoutX="185.0" layoutY="58.0" opacity="0.79" prefHeight="284.0" prefWidth="255.0" style="-fx-background-color: grey; -fx-background-radius: 16px;">
+         <children>
+            <Label alignment="CENTER" layoutX="-41.0" prefHeight="54.0" prefWidth="337.0" text="ELIMINAR PRODUCTO" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Light" size="23.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0">
+                     <input>
+                        <Glow level="0.14">
+                           <input>
+                              <DropShadow spread="0.68">
+                                 <color>
+                                    <Color red="0.2763157784938812" />
+                                 </color>
+                              </DropShadow>
+                           </input>
+                        </Glow>
+                     </input>
+                  </Glow>
+               </effect>
+            </Label>
+            <TextField fx:id="idProduct" layoutX="86.0" layoutY="77.0" prefHeight="23.0" prefWidth="83.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <ChoiceBox fx:id="tipo" layoutX="67.0" layoutY="142.0" prefHeight="21.0" prefWidth="122.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ChoiceBox>
+            <Label layoutX="74.0" layoutY="54.0" text="Código de producto" textFill="WHITE" />
+            <Label layoutX="116.0" layoutY="117.0" text="Tipo" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="deleteButton" layoutX="81.0" layoutY="213.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="33.0" prefWidth="98.0" style="-fx-background-color: black;" text="ELIMINAR" textFill="#fffdfd">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow level="1.0">
+                     <input>
+                        <DropShadow height="67.41499999999999" radius="33.94125" width="70.35">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </DropShadow>
+                     </input>
+                  </Glow>
+               </effect>
+            </Button>
+         </children>
+         <effect>
+            <ColorAdjust contrast="0.16" saturation="0.07">
+               <input>
+                  <DropShadow height="67.9" radius="28.32" width="47.38">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </input></ColorAdjust>
+         </effect>
+      </Pane>
+   </children>
+</Pane>

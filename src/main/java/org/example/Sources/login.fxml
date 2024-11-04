@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="663.0" maxWidth="944.0" minHeight="619.0" minWidth="641.0" prefHeight="619.0" prefWidth="934.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.LoginController">
+   <children>
+      <ImageView fitHeight="648.0" fitWidth="934.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IMAGENES/login.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" layoutX="14.0" layoutY="13.0" prefHeight="64.0" prefWidth="308.0" scaleShape="false" text="KIMIX LOGIN" textAlignment="CENTER">
+         <font>
+            <Font name="Candara Bold" size="43.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5055248618784529" cycleMethod="REFLECT" focusAngle="-96.26" focusDistance="0.034482758620689724" radius="0.867816091954023">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="0.28240740299224854" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <effect>
+            <Glow level="0.45" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="622.0" layoutY="137.0" prefHeight="32.0" prefWidth="121.0" text="USUARIO" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow level="0.98" />
+         </effect>
+      </Label>
+      <PasswordField fx:id="password" layoutX="589.0" layoutY="341.0" prefHeight="32.0" prefWidth="189.0" style="-fx-background-color: white; -fx-background-radius: 4px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.9921568632125854" green="1.0" blue="0.7372549176216125" />
+               </color>
+            </DropShadow>
+         </effect>
+      </PasswordField>
+      <TextField fx:id="user" layoutX="585.0" layoutY="189.0" prefHeight="32.0" prefWidth="196.0" style="-fx-background-color: white; -fx-background-radius: 4px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.9921568632125854" green="1.0" blue="0.7372549176216125" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="602.0" layoutY="285.0" prefHeight="32.0" prefWidth="157.0" text="CONTRASEÑA" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <Button fx:id="login" alignment="CENTER" contentDisplay="CENTER" layoutX="616.0" layoutY="441.0" mnemonicParsing="false" onAction="#loginCheck" opacity="0.89" prefHeight="32.0" prefWidth="130.0" scaleShape="false" style="-fx-background-color: white; -fx-background-radius: 4px;" text="LOGIN">
+         <effect>
+            <Glow level="0.38">
+               <input>
+                  <DropShadow blurType="GAUSSIAN" radius="13.665" spread="0.23" width="35.66">
+                     <color>
+                        <Color red="0.9921568632125854" green="1.0" blue="0.7372549176216125" />
+                     </color>
+                     <input>
+                        <InnerShadow choke="0.5" height="8.79" radius="10.49" width="35.17">
+                           <color>
+                              <Color red="0.9921568632125854" green="1.0" blue="0.7372549176216125" />
+                           </color>
+                        </InnerShadow>
+                     </input>
+                  </DropShadow>
+               </input>
+            </Glow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Semibold" size="13.0" />
+         </font>
+      </Button>
+      <Separator layoutX="442.0" layoutY="77.0" orientation="VERTICAL" prefHeight="480.0" prefWidth="12.0" />
+      <ImageView fitHeight="314.0" fitWidth="487.0" layoutX="-22.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IMAGENES/login1.png" />
+         </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="101.37" radius="51.955" spread="0.18" width="108.45">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label fx:id="errorText" alignment="CENTER" layoutX="472.0" layoutY="557.0" prefHeight="35.0" prefWidth="435.0" textFill="RED">
+         <font>
+            <Font name="Calibri Light" size="17.0" />
+         </font>
+         <effect>
+            <Glow level="0.55">
+               <input>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </input>
+            </Glow>
+         </effect>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</Pane>

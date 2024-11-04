@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="885.0" prefWidth="1279.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.AdminControllers.AdminController">
+  <children>
+      <Pane prefHeight="880.0" prefWidth="1279.0">
+         <children>
+            <ImageView fitHeight="893.0" fitWidth="1288.0" layoutX="-9.0" layoutY="-5.0">
+               <image>
+                  <Image url="@IMAGENES/admin.jpg" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="0.38" specularConstant="0.0" specularExponent="10.8" surfaceScale="3.22">
+                     <bumpInput>
+                        <Bloom threshold="1.0" />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant>
+                           <color>
+                              <Color red="1.0" blue="0.8745098114013672" />
+                           </color>
+                        </Light.Distant>
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="474.0" layoutY="-5.0" prefHeight="122.0" prefWidth="323.0" text="KIMIX ">
+               <font>
+                  <Font name="Corbel Light" size="56.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+               <textFill>
+                  <RadialGradient centerX="0.505524861878453" centerY="0.5" focusAngle="-99.73" focusDistance="-0.09195402298850575" radius="0.6149425287356323">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" blue="0.8745098114013672" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="412.0" layoutY="56.0" prefHeight="122.0" prefWidth="446.0" text="ADMIN PANEL">
+               <font>
+                  <Font name="Corbel Light" size="56.0" />
+               </font>
+               <effect>
+                  <Glow level="0.56">
+                     <input>
+                        <Glow level="1.0" />
+                     </input>
+                  </Glow>
+               </effect>
+               <textFill>
+                  <RadialGradient centerX="0.505524861878453" centerY="0.5" focusAngle="-99.73" focusDistance="-0.09195402298850575" radius="0.6149425287356323">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" blue="0.8745098114013672" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Pane layoutX="97.0" layoutY="200.0" opacity="0.93" prefHeight="219.0" prefWidth="314.0" style="-fx-background-color: #610856; -fx-background-radius: 11px;">
+               <children>
+                  <Button fx:id="añadir" layoutX="79.0" layoutY="75.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="37.0" prefWidth="148.0" style="-fx-background-color: black;" text="AÑADIR" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0">
+                           <input>
+                              <DropShadow />
+                           </input>
+                        </Glow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="14.0" prefHeight="45.0" prefWidth="221.0" text="PRODUCTOS" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Light" size="30.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </Label>
+                  <Button layoutX="79.0" layoutY="133.0" mnemonicParsing="false" onAction="#mostrarStats" prefHeight="37.0" prefWidth="148.0" style="-fx-background-color: black;" text="INFORME" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0">
+                           <input>
+                              <DropShadow />
+                           </input>
+                        </Glow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="73.28" radius="36.8725" spread="0.01" width="76.21">
+                     <color>
+                        <Color red="1.0" green="0.9907407164573669" blue="0.9907407164573669" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Pane layoutX="579.0" layoutY="200.0" prefHeight="525.0" prefWidth="667.0" style="-fx-background-color: #610856; -fx-background-radius: 11px;">
+               <effect>
+                  <DropShadow height="64.48" radius="31.0075" width="61.55">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label alignment="CENTER" layoutX="230.0" layoutY="25.0" prefHeight="29.0" prefWidth="221.0" text="RECORDATORIOS" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Light" size="27.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="recordatorio" editable="false" layoutX="14.0" layoutY="66.0" prefHeight="423.0" prefWidth="637.0" style="-fx-background-color: #996d98;">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </Pane>
+            <Pane layoutX="93.0" layoutY="514.0" opacity="0.93" prefHeight="211.0" prefWidth="323.0" style="-fx-background-color: #610856; -fx-background-radius: 11px;">
+               <children>
+                  <Button fx:id="añadirRec" layoutX="88.0" layoutY="79.0" mnemonicParsing="false" onAction="#addRec" prefHeight="37.0" prefWidth="140.0" style="-fx-background-color: black;" text="AÑADIR" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0">
+                           <input>
+                              <DropShadow />
+                           </input>
+                        </Glow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="eliminarRec" layoutX="87.0" layoutY="128.0" mnemonicParsing="false" onAction="#removeRec" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: black;" text="ELIMINAR" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0">
+                           <input>
+                              <DropShadow />
+                           </input>
+                        </Glow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="44.0" layoutY="14.0" prefHeight="37.0" prefWidth="236.0" text="RECORDATORIOS" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Light" size="30.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="73.28" radius="36.8725" spread="0.01" width="76.21">
+                     <color>
+                        <Color red="1.0" green="0.9907407164573669" blue="0.9907407164573669" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Label layoutX="124.0" layoutY="849.0" />
+            <Button fx:id="csvButton" layoutX="941.0" layoutY="705.0" mnemonicParsing="false" onAction="#importadorCSV" prefHeight="71.0" prefWidth="200.0" style="-fx-background-color: black;" text="KIMIX IMPORTADOR CSV" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0">
+                     <input>
+                        <DropShadow blurType="GAUSSIAN" height="35.65" radius="19.525" spread="0.14" width="44.45">
+                           <color>
+                              <Color red="0.5333333611488342" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </input>
+                  </Glow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="691.0" layoutY="705.0" mnemonicParsing="false" onAction="#gestorCompras" prefHeight="71.0" prefWidth="194.0" style="-fx-background-color: black;" text="GESTOR DE COMPRAS" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0">
+                     <input>
+                        <DropShadow blurType="GAUSSIAN" height="35.65" radius="19.525" spread="0.14" width="44.45">
+                           <color>
+                              <Color red="0.5333333611488342" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </input>
+                  </Glow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="843.0" layoutY="810.0" mnemonicParsing="false" onAction="#ayuda" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: BLUE;" text="AYUDA" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0">
+                     <input>
+                        <DropShadow>
+                           <input>
+                              <ColorAdjust brightness="-0.01" contrast="-0.19" hue="0.05" saturation="0.51" />
+                           </input></DropShadow>
+                     </input>
+                  </Glow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+  </children>
+</VBox>
